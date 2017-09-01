@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+// MODELO VISTA CONTROLADOR (Suma de números)
+//No validado! Todavia
 <html>
     <head>
+        /*Titulo de la pagina*/
         <title>Suma Numeros MVC</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        
+        /*Estilo de la Pagina*/
         <style>
             div{
                 text-align: center;
@@ -24,17 +28,24 @@
                 font-size: larger;
             }
             input[type="submit"]{
-                
+                width: 150px;
+                height: 50px;
+                background-color: black;
+                color: white;
+                font-size: larger;
             }
         </style>
     </head>
     <body>
         <div>
             <h1> Suma de Números con MVC </h1>
+            /*Enviamos los datos por el metodo post al controlador (Sevlet)*/
             <form name="formu" method="post" action="../SevletController">
+                /*Etiquetas html que recibiran los datos*/
                 <input type="text" placeholder="Un número" id="numA" name="numA"/>
                 <input type="text" placeholder="Otro número" id="numB" name="numB"/>
-            
+                /*Boton de envio de formulario*/
+                <br/><br/>
                 <input type="submit" value="Enviar" id="envio" name="envio"/>
             </form>
         <div/>
