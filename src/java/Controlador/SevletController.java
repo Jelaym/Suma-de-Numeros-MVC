@@ -26,16 +26,17 @@ public class SevletController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        /* Inicializamos variables */
         sumaTo sumaT= new sumaTo();
         sumaBo sumaB= new sumaBo();
-        
+        /* Damos datos */
         sumaB.setNumA(Integer.parseInt(request.getParameter("numA")));
         sumaB.setNumB(Integer.parseInt(request.getParameter("numB")));
-        
+        /* Creamos la sesion y traemos el resultado dandoselo a esta */
         HttpSession sesion = request.getSession();
         sumaT.sumaBO(sumaB);
         sesion.setAttribute("resultado", sumaT.suma());
-        
+        /* Enviamos a la pagina que mostrara el resultado */
         response.sendRedirect("Vista/resultadosJSP.jsp");
         /*response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
