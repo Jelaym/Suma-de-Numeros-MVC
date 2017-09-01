@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Suma Numeros MVC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+            div{
+                text-align: center;
+            }
+            h1{
+                font-size: xx-large;
+                animation-name: titulo;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes titulo{
+                33%{ color: cyan;}
+                66%{ color: green;}
+                100%{ color: red;}
+            }
+            input[type="text"]{
+                font-size: larger;
+            }
+            input[type="submit"]{
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Suma de Números con MVC </h1>
+            <form name="formu" method="post" action="../SevletController">
+                <input type="text" placeholder="Un número" id="numA" name="numA"/>
+                <input type="text" placeholder="Otro número" id="numB" name="numB"/>
+            
+                <input type="submit" value="Enviar" id="envio" name="envio"/>
+            </form>
+        <div/>
+    </body>
+</html>
