@@ -9,11 +9,12 @@ import java.io.Serializable;
 public class sumaBo implements Serializable{
     int numA;
     int numB;
-    
+    /* Constructor */
     public sumaBo(){
         numA= 0;
         numB= 0;
     }
+    /* Metodos para dar y/o recibir variables / parametros */
     public void setNumA(int num){
         this.numA= num;
     }
