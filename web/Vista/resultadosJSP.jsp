@@ -12,11 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% 
+        /* Recibe parametros del sevlet por medio de httpsesion */
+        <%
             int resul= 0;
             HttpSession sesion = request.getSession();
             resul= Integer.parseInt(sesion.getAttribute("resultado") + "");
         %>
+        /* Despliega resultado */
         <h1>El Resultado es: <%= resul %></h1>
     </body>
 </html>
